@@ -188,7 +188,7 @@ namespace picture_gallery
                                 String[] row = new string[2];
                                 var date = reader.GetDateTime(1);
                                 row[0] = reader.GetInt32(0).ToString();
-                                row[1] = "От: " + date.Year + "." + date.Month + "." + date.Day + " Макс. кол. картин:" + reader.GetInt32(2);
+                                row[1] = "От: " + date.Day + "."+ date.Month + "."+ date.Year + " Макс. кол. картин:" + reader.GetInt32(2);
                                 local.Add(row);
                             }
                         }
