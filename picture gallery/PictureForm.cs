@@ -21,8 +21,8 @@ namespace picture_gallery
         }
         private void fillElements()
         {
-            this.сотрудникTableAdapter.Fill(this.picture_galleryDataSet.Сотрудник);
-            this.жанрTableAdapter.Fill(this.picture_galleryDataSet.Жанр);
+            this.employeeTableAdapter.Fill(this.picture_galleryDataSet.Сотрудник);
+            this.GenreTableAdapter.Fill(this.picture_galleryDataSet.Жанр);
             addDirect.Items.Add("Без направления");
             updDir.Items.Add("Без направления");
             updExpos.Items.Add("Нет выставки");
@@ -41,7 +41,7 @@ namespace picture_gallery
             }
             addExpos.SelectedIndex = 0;
             updExpos.SelectedIndex = 0;
-            this.авторTableAdapter.Fill(this.picture_galleryDataSet.Автор);
+            this.autorTableAdapter.Fill(this.picture_galleryDataSet.Автор);
         }
 
         private void addBtn_Click(object sender, EventArgs e)

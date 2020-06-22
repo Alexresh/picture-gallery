@@ -23,8 +23,8 @@ namespace picture_gallery
 
         private void PurchaseForm_Load(object sender, EventArgs e)
         {
-            this.покупательTableAdapter.Fill(this.picture_galleryDataSet.Покупатель);
-            this.сотрудникTableAdapter.Fill(this.picture_galleryDataSet.Сотрудник);
+            this.buyerTableAdapter.Fill(this.picture_galleryDataSet.Покупатель);
+            this.employeeTableAdapter.Fill(this.picture_galleryDataSet.Сотрудник);
             this.purchased_paintingsTableAdapter.Fill(this.picture_galleryDataSet.purchased_paintings);
             fillPictureComboBox(addPicture);
             addPicture.SelectedIndex = 0;

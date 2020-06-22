@@ -50,57 +50,57 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.addEmployee = new System.Windows.Forms.ComboBox();
-            this.сотрудникBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addExpos = new System.Windows.Forms.ComboBox();
             this.addGenre = new System.Windows.Forms.ComboBox();
-            this.жанрBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GenreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addDirect = new System.Windows.Forms.ComboBox();
             this.addAutor = new System.Windows.Forms.ComboBox();
-            this.авторBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addMoney = new System.Windows.Forms.NumericUpDown();
             this.addPicName = new System.Windows.Forms.TextBox();
             this.addBtn = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.updateGroup = new System.Windows.Forms.GroupBox();
+            this.updBtn = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.updName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.updPrice = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.updAutor = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.updDir = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.updGenre = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.updExpos = new System.Windows.Forms.ComboBox();
+            this.updEmployee = new System.Windows.Forms.ComboBox();
+            this.updListBox = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.delBtn = new System.Windows.Forms.Button();
             this.delList = new System.Windows.Forms.ListBox();
             this.picturesTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.PicturesTableAdapter();
-            this.авторTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.АвторTableAdapter();
+            this.autorTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.АвторTableAdapter();
             this.tableAdapterManager = new picture_gallery.picture_galleryDataSetTableAdapters.TableAdapterManager();
-            this.жанрTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.ЖанрTableAdapter();
-            this.сотрудникTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.СотрудникTableAdapter();
-            this.updListBox = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.updEmployee = new System.Windows.Forms.ComboBox();
-            this.updExpos = new System.Windows.Forms.ComboBox();
-            this.updGenre = new System.Windows.Forms.ComboBox();
-            this.updDir = new System.Windows.Forms.ComboBox();
-            this.updAutor = new System.Windows.Forms.ComboBox();
-            this.updPrice = new System.Windows.Forms.NumericUpDown();
-            this.updName = new System.Windows.Forms.TextBox();
-            this.updateGroup = new System.Windows.Forms.GroupBox();
-            this.updBtn = new System.Windows.Forms.Button();
+            this.GenreTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.ЖанрTableAdapter();
+            this.employeeTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.СотрудникTableAdapter();
             this.pictureTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_galleryDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.жанрBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.авторBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenreBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMoney)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updPrice)).BeginInit();
             this.updateGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updPrice)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureTabs
@@ -303,8 +303,8 @@
             // 
             // addEmployee
             // 
-            this.addEmployee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.сотрудникBindingSource, "ФИО", true));
-            this.addEmployee.DataSource = this.сотрудникBindingSource;
+            this.addEmployee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "ФИО", true));
+            this.addEmployee.DataSource = this.employeeBindingSource;
             this.addEmployee.DisplayMember = "ФИО";
             this.addEmployee.FormattingEnabled = true;
             this.addEmployee.Location = new System.Drawing.Point(527, 74);
@@ -312,10 +312,10 @@
             this.addEmployee.Size = new System.Drawing.Size(201, 21);
             this.addEmployee.TabIndex = 7;
             // 
-            // сотрудникBindingSource
+            // employeeBindingSource
             // 
-            this.сотрудникBindingSource.DataMember = "Сотрудник";
-            this.сотрудникBindingSource.DataSource = this.picture_galleryDataSet;
+            this.employeeBindingSource.DataMember = "Сотрудник";
+            this.employeeBindingSource.DataSource = this.picture_galleryDataSet;
             // 
             // addExpos
             // 
@@ -327,8 +327,8 @@
             // 
             // addGenre
             // 
-            this.addGenre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.жанрBindingSource, "Название", true));
-            this.addGenre.DataSource = this.жанрBindingSource;
+            this.addGenre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GenreBindingSource, "Название", true));
+            this.addGenre.DataSource = this.GenreBindingSource;
             this.addGenre.DisplayMember = "Название";
             this.addGenre.FormattingEnabled = true;
             this.addGenre.Location = new System.Drawing.Point(136, 74);
@@ -336,10 +336,10 @@
             this.addGenre.Size = new System.Drawing.Size(121, 21);
             this.addGenre.TabIndex = 5;
             // 
-            // жанрBindingSource
+            // GenreBindingSource
             // 
-            this.жанрBindingSource.DataMember = "Жанр";
-            this.жанрBindingSource.DataSource = this.picture_galleryDataSet;
+            this.GenreBindingSource.DataMember = "Жанр";
+            this.GenreBindingSource.DataSource = this.picture_galleryDataSet;
             // 
             // addDirect
             // 
@@ -351,7 +351,7 @@
             // 
             // addAutor
             // 
-            this.addAutor.DataSource = this.авторBindingSource;
+            this.addAutor.DataSource = this.autorBindingSource;
             this.addAutor.DisplayMember = "ФИО";
             this.addAutor.FormattingEnabled = true;
             this.addAutor.Location = new System.Drawing.Point(329, 23);
@@ -359,10 +359,10 @@
             this.addAutor.Size = new System.Drawing.Size(192, 21);
             this.addAutor.TabIndex = 3;
             // 
-            // авторBindingSource
+            // autorBindingSource
             // 
-            this.авторBindingSource.DataMember = "Автор";
-            this.авторBindingSource.DataSource = this.picture_galleryDataSet;
+            this.autorBindingSource.DataMember = "Автор";
+            this.autorBindingSource.DataSource = this.picture_galleryDataSet;
             // 
             // addMoney
             // 
@@ -404,6 +404,183 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Обновление";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // updateGroup
+            // 
+            this.updateGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateGroup.Controls.Add(this.updBtn);
+            this.updateGroup.Controls.Add(this.label15);
+            this.updateGroup.Controls.Add(this.label9);
+            this.updateGroup.Controls.Add(this.updName);
+            this.updateGroup.Controls.Add(this.label10);
+            this.updateGroup.Controls.Add(this.updPrice);
+            this.updateGroup.Controls.Add(this.label11);
+            this.updateGroup.Controls.Add(this.updAutor);
+            this.updateGroup.Controls.Add(this.label12);
+            this.updateGroup.Controls.Add(this.updDir);
+            this.updateGroup.Controls.Add(this.label13);
+            this.updateGroup.Controls.Add(this.updGenre);
+            this.updateGroup.Controls.Add(this.label14);
+            this.updateGroup.Controls.Add(this.updExpos);
+            this.updateGroup.Controls.Add(this.updEmployee);
+            this.updateGroup.Location = new System.Drawing.Point(364, 6);
+            this.updateGroup.Name = "updateGroup";
+            this.updateGroup.Size = new System.Drawing.Size(368, 241);
+            this.updateGroup.TabIndex = 30;
+            this.updateGroup.TabStop = false;
+            this.updateGroup.Text = "Обновление";
+            // 
+            // updBtn
+            // 
+            this.updBtn.Location = new System.Drawing.Point(268, 201);
+            this.updBtn.Name = "updBtn";
+            this.updBtn.Size = new System.Drawing.Size(94, 33);
+            this.updBtn.TabIndex = 31;
+            this.updBtn.Text = "Обновить";
+            this.updBtn.UseVisualStyleBackColor = true;
+            this.updBtn.Click += new System.EventHandler(this.updBtn_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(19, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 13);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Название";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 177);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Сотрудник";
+            // 
+            // updName
+            // 
+            this.updName.Location = new System.Drawing.Point(103, 13);
+            this.updName.Name = "updName";
+            this.updName.Size = new System.Drawing.Size(258, 20);
+            this.updName.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 150);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Выставка";
+            // 
+            // updPrice
+            // 
+            this.updPrice.Location = new System.Drawing.Point(103, 39);
+            this.updPrice.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.updPrice.Name = "updPrice";
+            this.updPrice.Size = new System.Drawing.Size(258, 20);
+            this.updPrice.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(19, 122);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Жанр";
+            // 
+            // updAutor
+            // 
+            this.updAutor.DataSource = this.autorBindingSource;
+            this.updAutor.DisplayMember = "ФИО";
+            this.updAutor.FormattingEnabled = true;
+            this.updAutor.Location = new System.Drawing.Point(103, 65);
+            this.updAutor.Name = "updAutor";
+            this.updAutor.Size = new System.Drawing.Size(258, 21);
+            this.updAutor.TabIndex = 18;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 95);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 13);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Направление";
+            // 
+            // updDir
+            // 
+            this.updDir.FormattingEnabled = true;
+            this.updDir.Location = new System.Drawing.Point(103, 92);
+            this.updDir.Name = "updDir";
+            this.updDir.Size = new System.Drawing.Size(258, 21);
+            this.updDir.TabIndex = 19;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(19, 68);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 13);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Автор";
+            // 
+            // updGenre
+            // 
+            this.updGenre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.GenreBindingSource, "Название", true));
+            this.updGenre.DataSource = this.GenreBindingSource;
+            this.updGenre.DisplayMember = "Название";
+            this.updGenre.FormattingEnabled = true;
+            this.updGenre.Location = new System.Drawing.Point(103, 119);
+            this.updGenre.Name = "updGenre";
+            this.updGenre.Size = new System.Drawing.Size(258, 21);
+            this.updGenre.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 41);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 13);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "Цена";
+            // 
+            // updExpos
+            // 
+            this.updExpos.FormattingEnabled = true;
+            this.updExpos.Location = new System.Drawing.Point(103, 147);
+            this.updExpos.Name = "updExpos";
+            this.updExpos.Size = new System.Drawing.Size(258, 21);
+            this.updExpos.TabIndex = 21;
+            // 
+            // updEmployee
+            // 
+            this.updEmployee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "ФИО", true));
+            this.updEmployee.DataSource = this.employeeBindingSource;
+            this.updEmployee.DisplayMember = "ФИО";
+            this.updEmployee.FormattingEnabled = true;
+            this.updEmployee.Location = new System.Drawing.Point(103, 174);
+            this.updEmployee.Name = "updEmployee";
+            this.updEmployee.Size = new System.Drawing.Size(258, 21);
+            this.updEmployee.TabIndex = 22;
+            // 
+            // updListBox
+            // 
+            this.updListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updListBox.FormattingEnabled = true;
+            this.updListBox.Location = new System.Drawing.Point(6, 6);
+            this.updListBox.Name = "updListBox";
+            this.updListBox.Size = new System.Drawing.Size(352, 277);
+            this.updListBox.TabIndex = 0;
+            this.updListBox.SelectedIndexChanged += new System.EventHandler(this.updListBox_SelectedIndexChanged);
             // 
             // tabPage4
             // 
@@ -454,209 +631,32 @@
             // 
             this.picturesTableAdapter.ClearBeforeFill = true;
             // 
-            // авторTableAdapter
+            // autorTableAdapter
             // 
-            this.авторTableAdapter.ClearBeforeFill = true;
+            this.autorTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.UpdateOrder = picture_gallery.picture_galleryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.АвторTableAdapter = this.авторTableAdapter;
+            this.tableAdapterManager.АвторTableAdapter = this.autorTableAdapter;
             this.tableAdapterManager.ВыставкаTableAdapter = null;
             this.tableAdapterManager.ДолжностьTableAdapter = null;
-            this.tableAdapterManager.ЖанрTableAdapter = this.жанрTableAdapter;
+            this.tableAdapterManager.ЖанрTableAdapter = this.GenreTableAdapter;
             this.tableAdapterManager.КартинаTableAdapter = null;
             this.tableAdapterManager.НаправлениеTableAdapter = null;
             this.tableAdapterManager.ПокупательTableAdapter = null;
             this.tableAdapterManager.ПокупкиTableAdapter = null;
-            this.tableAdapterManager.СотрудникTableAdapter = this.сотрудникTableAdapter;
+            this.tableAdapterManager.СотрудникTableAdapter = this.employeeTableAdapter;
             this.tableAdapterManager.СтатусTableAdapter = null;
             // 
-            // жанрTableAdapter
+            // GenreTableAdapter
             // 
-            this.жанрTableAdapter.ClearBeforeFill = true;
+            this.GenreTableAdapter.ClearBeforeFill = true;
             // 
-            // сотрудникTableAdapter
+            // employeeTableAdapter
             // 
-            this.сотрудникTableAdapter.ClearBeforeFill = true;
-            // 
-            // updListBox
-            // 
-            this.updListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.updListBox.FormattingEnabled = true;
-            this.updListBox.Location = new System.Drawing.Point(6, 6);
-            this.updListBox.Name = "updListBox";
-            this.updListBox.Size = new System.Drawing.Size(352, 277);
-            this.updListBox.TabIndex = 0;
-            this.updListBox.SelectedIndexChanged += new System.EventHandler(this.updListBox_SelectedIndexChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 177);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Сотрудник";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 150);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 13);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Выставка";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 122);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Жанр";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 95);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 13);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Направление";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(19, 68);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 13);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Автор";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 41);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(33, 13);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Цена";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 13);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Название";
-            // 
-            // updEmployee
-            // 
-            this.updEmployee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.сотрудникBindingSource, "ФИО", true));
-            this.updEmployee.DataSource = this.сотрудникBindingSource;
-            this.updEmployee.DisplayMember = "ФИО";
-            this.updEmployee.FormattingEnabled = true;
-            this.updEmployee.Location = new System.Drawing.Point(103, 174);
-            this.updEmployee.Name = "updEmployee";
-            this.updEmployee.Size = new System.Drawing.Size(258, 21);
-            this.updEmployee.TabIndex = 22;
-            // 
-            // updExpos
-            // 
-            this.updExpos.FormattingEnabled = true;
-            this.updExpos.Location = new System.Drawing.Point(103, 147);
-            this.updExpos.Name = "updExpos";
-            this.updExpos.Size = new System.Drawing.Size(258, 21);
-            this.updExpos.TabIndex = 21;
-            // 
-            // updGenre
-            // 
-            this.updGenre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.жанрBindingSource, "Название", true));
-            this.updGenre.DataSource = this.жанрBindingSource;
-            this.updGenre.DisplayMember = "Название";
-            this.updGenre.FormattingEnabled = true;
-            this.updGenre.Location = new System.Drawing.Point(103, 119);
-            this.updGenre.Name = "updGenre";
-            this.updGenre.Size = new System.Drawing.Size(258, 21);
-            this.updGenre.TabIndex = 20;
-            // 
-            // updDir
-            // 
-            this.updDir.FormattingEnabled = true;
-            this.updDir.Location = new System.Drawing.Point(103, 92);
-            this.updDir.Name = "updDir";
-            this.updDir.Size = new System.Drawing.Size(258, 21);
-            this.updDir.TabIndex = 19;
-            // 
-            // updAutor
-            // 
-            this.updAutor.DataSource = this.авторBindingSource;
-            this.updAutor.DisplayMember = "ФИО";
-            this.updAutor.FormattingEnabled = true;
-            this.updAutor.Location = new System.Drawing.Point(103, 65);
-            this.updAutor.Name = "updAutor";
-            this.updAutor.Size = new System.Drawing.Size(258, 21);
-            this.updAutor.TabIndex = 18;
-            // 
-            // updPrice
-            // 
-            this.updPrice.Location = new System.Drawing.Point(103, 39);
-            this.updPrice.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.updPrice.Name = "updPrice";
-            this.updPrice.Size = new System.Drawing.Size(258, 20);
-            this.updPrice.TabIndex = 17;
-            // 
-            // updName
-            // 
-            this.updName.Location = new System.Drawing.Point(103, 13);
-            this.updName.Name = "updName";
-            this.updName.Size = new System.Drawing.Size(258, 20);
-            this.updName.TabIndex = 16;
-            // 
-            // updateGroup
-            // 
-            this.updateGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateGroup.Controls.Add(this.updBtn);
-            this.updateGroup.Controls.Add(this.label15);
-            this.updateGroup.Controls.Add(this.label9);
-            this.updateGroup.Controls.Add(this.updName);
-            this.updateGroup.Controls.Add(this.label10);
-            this.updateGroup.Controls.Add(this.updPrice);
-            this.updateGroup.Controls.Add(this.label11);
-            this.updateGroup.Controls.Add(this.updAutor);
-            this.updateGroup.Controls.Add(this.label12);
-            this.updateGroup.Controls.Add(this.updDir);
-            this.updateGroup.Controls.Add(this.label13);
-            this.updateGroup.Controls.Add(this.updGenre);
-            this.updateGroup.Controls.Add(this.label14);
-            this.updateGroup.Controls.Add(this.updExpos);
-            this.updateGroup.Controls.Add(this.updEmployee);
-            this.updateGroup.Location = new System.Drawing.Point(364, 6);
-            this.updateGroup.Name = "updateGroup";
-            this.updateGroup.Size = new System.Drawing.Size(368, 241);
-            this.updateGroup.TabIndex = 30;
-            this.updateGroup.TabStop = false;
-            this.updateGroup.Text = "Обновление";
-            // 
-            // updBtn
-            // 
-            this.updBtn.Location = new System.Drawing.Point(268, 201);
-            this.updBtn.Name = "updBtn";
-            this.updBtn.Size = new System.Drawing.Size(94, 33);
-            this.updBtn.TabIndex = 31;
-            this.updBtn.Text = "Обновить";
-            this.updBtn.UseVisualStyleBackColor = true;
-            this.updBtn.Click += new System.EventHandler(this.updBtn_Click);
+            this.employeeTableAdapter.ClearBeforeFill = true;
             // 
             // PictureForm
             // 
@@ -675,16 +675,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture_galleryDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.жанрBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.авторBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenreBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addMoney)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updPrice)).EndInit();
             this.updateGroup.ResumeLayout(false);
             this.updateGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updPrice)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -722,13 +722,13 @@
         private System.Windows.Forms.NumericUpDown addMoney;
         private System.Windows.Forms.TextBox addPicName;
         private System.Windows.Forms.Button addBtn;
-        private picture_galleryDataSetTableAdapters.АвторTableAdapter авторTableAdapter;
+        private picture_galleryDataSetTableAdapters.АвторTableAdapter autorTableAdapter;
         private picture_galleryDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingSource авторBindingSource;
-        private picture_galleryDataSetTableAdapters.ЖанрTableAdapter жанрTableAdapter;
-        private System.Windows.Forms.BindingSource жанрBindingSource;
-        private picture_galleryDataSetTableAdapters.СотрудникTableAdapter сотрудникTableAdapter;
-        private System.Windows.Forms.BindingSource сотрудникBindingSource;
+        private System.Windows.Forms.BindingSource autorBindingSource;
+        private picture_galleryDataSetTableAdapters.ЖанрTableAdapter GenreTableAdapter;
+        private System.Windows.Forms.BindingSource GenreBindingSource;
+        private picture_galleryDataSetTableAdapters.СотрудникTableAdapter employeeTableAdapter;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button delBtn;
         private System.Windows.Forms.ListBox delList;

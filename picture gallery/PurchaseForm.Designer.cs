@@ -33,7 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.addBuyer = new System.Windows.Forms.ComboBox();
-            this.покупательBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buyerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.picture_galleryDataSet = new picture_gallery.picture_galleryDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.addDate = new System.Windows.Forms.DateTimePicker();
             this.addPicture = new System.Windows.Forms.ComboBox();
             this.addEmployee = new System.Windows.Forms.ComboBox();
-            this.сотрудникBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.датаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +56,7 @@
             this.delList = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.updGroup = new System.Windows.Forms.GroupBox();
+            this.updBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.updDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,14 +68,13 @@
             this.updList = new System.Windows.Forms.ListBox();
             this.purchased_paintingsTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.purchased_paintingsTableAdapter();
             this.tableAdapterManager = new picture_gallery.picture_galleryDataSetTableAdapters.TableAdapterManager();
-            this.покупательTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.ПокупательTableAdapter();
-            this.сотрудникTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.СотрудникTableAdapter();
-            this.updBtn = new System.Windows.Forms.Button();
+            this.buyerTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.ПокупательTableAdapter();
+            this.employeeTableAdapter = new picture_gallery.picture_galleryDataSetTableAdapters.СотрудникTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.покупательBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buyerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_galleryDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchased_paintingsBindingSource)).BeginInit();
@@ -129,8 +129,8 @@
             // 
             // addBuyer
             // 
-            this.addBuyer.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.покупательBindingSource, "ФИО", true));
-            this.addBuyer.DataSource = this.покупательBindingSource;
+            this.addBuyer.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.buyerBindingSource, "ФИО", true));
+            this.addBuyer.DataSource = this.buyerBindingSource;
             this.addBuyer.DisplayMember = "ФИО";
             this.addBuyer.FormattingEnabled = true;
             this.addBuyer.Location = new System.Drawing.Point(6, 86);
@@ -138,10 +138,10 @@
             this.addBuyer.Size = new System.Drawing.Size(233, 21);
             this.addBuyer.TabIndex = 7;
             // 
-            // покупательBindingSource
+            // buyerBindingSource
             // 
-            this.покупательBindingSource.DataMember = "Покупатель";
-            this.покупательBindingSource.DataSource = this.picture_galleryDataSet;
+            this.buyerBindingSource.DataMember = "Покупатель";
+            this.buyerBindingSource.DataSource = this.picture_galleryDataSet;
             // 
             // picture_galleryDataSet
             // 
@@ -202,8 +202,8 @@
             // 
             // addEmployee
             // 
-            this.addEmployee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.сотрудникBindingSource, "ФИО", true));
-            this.addEmployee.DataSource = this.сотрудникBindingSource;
+            this.addEmployee.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "ФИО", true));
+            this.addEmployee.DataSource = this.employeeBindingSource;
             this.addEmployee.DisplayMember = "ФИО";
             this.addEmployee.FormattingEnabled = true;
             this.addEmployee.Location = new System.Drawing.Point(245, 34);
@@ -211,10 +211,10 @@
             this.addEmployee.Size = new System.Drawing.Size(345, 21);
             this.addEmployee.TabIndex = 0;
             // 
-            // сотрудникBindingSource
+            // employeeBindingSource
             // 
-            this.сотрудникBindingSource.DataMember = "Сотрудник";
-            this.сотрудникBindingSource.DataSource = this.picture_galleryDataSet;
+            this.employeeBindingSource.DataMember = "Сотрудник";
+            this.employeeBindingSource.DataSource = this.picture_galleryDataSet;
             // 
             // tabPage2
             // 
@@ -355,6 +355,16 @@
             this.updGroup.TabStop = false;
             this.updGroup.Text = "Обновление";
             // 
+            // updBtn
+            // 
+            this.updBtn.Location = new System.Drawing.Point(6, 189);
+            this.updBtn.Name = "updBtn";
+            this.updBtn.Size = new System.Drawing.Size(75, 23);
+            this.updBtn.TabIndex = 9;
+            this.updBtn.Text = "Обновить";
+            this.updBtn.UseVisualStyleBackColor = true;
+            this.updBtn.Click += new System.EventHandler(this.updBtn_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -386,7 +396,7 @@
             // 
             this.updEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.updEmployee.DataSource = this.сотрудникBindingSource;
+            this.updEmployee.DataSource = this.employeeBindingSource;
             this.updEmployee.DisplayMember = "ФИО";
             this.updEmployee.FormattingEnabled = true;
             this.updEmployee.Location = new System.Drawing.Point(6, 81);
@@ -417,7 +427,7 @@
             // 
             this.updBuyer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.updBuyer.DataSource = this.покупательBindingSource;
+            this.updBuyer.DataSource = this.buyerBindingSource;
             this.updBuyer.DisplayMember = "ФИО";
             this.updBuyer.FormattingEnabled = true;
             this.updBuyer.Location = new System.Drawing.Point(6, 121);
@@ -459,28 +469,18 @@
             this.tableAdapterManager.ЖанрTableAdapter = null;
             this.tableAdapterManager.КартинаTableAdapter = null;
             this.tableAdapterManager.НаправлениеTableAdapter = null;
-            this.tableAdapterManager.ПокупательTableAdapter = this.покупательTableAdapter;
+            this.tableAdapterManager.ПокупательTableAdapter = this.buyerTableAdapter;
             this.tableAdapterManager.ПокупкиTableAdapter = null;
-            this.tableAdapterManager.СотрудникTableAdapter = this.сотрудникTableAdapter;
+            this.tableAdapterManager.СотрудникTableAdapter = this.employeeTableAdapter;
             this.tableAdapterManager.СтатусTableAdapter = null;
             // 
-            // покупательTableAdapter
+            // buyerTableAdapter
             // 
-            this.покупательTableAdapter.ClearBeforeFill = true;
+            this.buyerTableAdapter.ClearBeforeFill = true;
             // 
-            // сотрудникTableAdapter
+            // employeeTableAdapter
             // 
-            this.сотрудникTableAdapter.ClearBeforeFill = true;
-            // 
-            // updBtn
-            // 
-            this.updBtn.Location = new System.Drawing.Point(6, 189);
-            this.updBtn.Name = "updBtn";
-            this.updBtn.Size = new System.Drawing.Size(75, 23);
-            this.updBtn.TabIndex = 9;
-            this.updBtn.Text = "Обновить";
-            this.updBtn.UseVisualStyleBackColor = true;
-            this.updBtn.Click += new System.EventHandler(this.updBtn_Click);
+            this.employeeTableAdapter.ClearBeforeFill = true;
             // 
             // PurchaseForm
             // 
@@ -495,9 +495,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.покупательBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buyerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_galleryDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сотрудникBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchased_paintingsBindingSource)).EndInit();
@@ -531,14 +531,14 @@
         private System.Windows.Forms.DateTimePicker addDate;
         private System.Windows.Forms.ComboBox addPicture;
         private System.Windows.Forms.ComboBox addEmployee;
-        private picture_galleryDataSetTableAdapters.СотрудникTableAdapter сотрудникTableAdapter;
-        private System.Windows.Forms.BindingSource сотрудникBindingSource;
+        private picture_galleryDataSetTableAdapters.СотрудникTableAdapter employeeTableAdapter;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox addBuyer;
-        private picture_galleryDataSetTableAdapters.ПокупательTableAdapter покупательTableAdapter;
-        private System.Windows.Forms.BindingSource покупательBindingSource;
+        private picture_galleryDataSetTableAdapters.ПокупательTableAdapter buyerTableAdapter;
+        private System.Windows.Forms.BindingSource buyerBindingSource;
         private System.Windows.Forms.ListBox delList;
         private System.Windows.Forms.Button delBtn;
         private System.Windows.Forms.GroupBox updGroup;
